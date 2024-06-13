@@ -25,11 +25,11 @@
         <th>{{ $plan->plan->name}}</th>
         <td>{{ $plan->price}}</td>
         <td>
-            <a href="{{ route('combo.edit', $plan->id)}}">Edit</a>
+            <a class="btn btn-info" href="{{ route('combo.edit', $plan->id)}}">Edit</a>
             <form action="{{ route('combo.destroy', $plan->id) }}" method="POST" style="display:inline;">
                 @csrf
                 @method('DELETE')
-                <button type="submit">Delete</button>
+                <button class="btn btn-danger" type="submit">Delete</button>
             </form>
         </td>
         </tr>

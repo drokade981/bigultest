@@ -27,11 +27,11 @@
         <th>{{ $criteria->income_less_than}} - {{ $criteria->income_greater_than}}</th>
         <td>{{ $criteria->last_login_days_ago}} days ago</td>
         <td>
-            <a href="{{ route('eligibility.edit', $criteria->id)}}">Edit</a>
+            <a class="btn btn-info" href="{{ route('eligibility.edit', $criteria->id)}}">Edit</a>
             <form action="{{ route('eligibility.destroy', $criteria->id) }}" method="POST" style="display:inline;">
                 @csrf
                 @method('DELETE')
-                <button type="submit">Delete</button>
+                <button class="btn btn-danger" type="submit">Delete</button>
             </form>
         </td>
         </tr>
