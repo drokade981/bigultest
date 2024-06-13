@@ -6,18 +6,7 @@
     <h2>Eligibility List</h2>
     <a class="btn btn-primary" href="{{ route('eligibility.create') }}">Add Eligibility</a>
 
-    @if(session('success'))
-    <div class="alert alert-success alert-dismissible">
-        {{ session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    @endif
-    @if(session('error'))
-    <div class="alert alert-danger alert-dismissible">
-        {{ session('error') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    @endif
+    <x-response-component/>
     <table class="table">
         <thead>
             <tr>

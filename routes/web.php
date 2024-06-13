@@ -16,9 +16,7 @@ use App\Http\Controllers\EligibilityCriteriaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PlanController::class, 'index']);
 
 Route::resource('plans', PlanController::class);
 Route::resource('combo', ComboPlanController::class);
